@@ -11,16 +11,11 @@ import cn.nukkit.command.CommandSender;
 import cn.nukkit.event.EventHandler;
 import cn.nukkit.event.player.PlayerChatEvent;
 import cn.nukkit.event.player.PlayerInteractEvent;
-import cn.nukkit.event.player.PlayerJoinEvent;
 import cn.nukkit.event.player.PlayerLocallyInitializedEvent;
 import cn.nukkit.plugin.PluginBase;
 import cn.nukkit.scoreboard.data.DisplaySlot;
 import cn.nukkit.utils.TextFormat;
 import org.jetbrains.annotations.NotNull;
-import NWTW.Engine.Translate.TranslateManager;
-
-import javax.xml.soap.Text;
-import java.util.Locale;
 
 public class Main extends PluginBase {
 
