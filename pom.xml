@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
-    <artifactId>MIDAGEcore</artifactId>
+    <groupId>MIDAGE.Core</groupId>
+    <artifactId>MIDAGEcore1</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <repositories>
@@ -27,14 +27,25 @@
             <groupId>com.github.NazarbekAld</groupId>
             <artifactId>NWTWEngine</artifactId>
             <version>main-a82bb16c53-1</version>
+            <optional>false</optional>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/NWTWEngine-1.0-SNAPSHOT.jar</systemPath>
         </dependency>
-
+        <dependency>
+            <groupId>ME.API</groupId>
+            <artifactId>MEAPI</artifactId>
+            <version>main-a82bb16c53-1</version>
+            <optional>false</optional>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/MEAPI-1.0-SNAPSHOT.jar</systemPath>
+        </dependency>
     </dependencies>
 
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <build>
@@ -69,8 +80,18 @@
                     <artifactId>maven-site-plugin</artifactId>
                     <version>3.8.2</version>
                 </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.10.0</version>
+                    <configuration>
+                        <source>${maven.compiler.source}</source>
+                        <target>${maven.compiler.target}</target>
+                        <!--suppress UnresolvedMavenProperty -->
+                        <encoding>${maven.compiler.encoding}</encoding>
+                    </configuration>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
-
 </project>

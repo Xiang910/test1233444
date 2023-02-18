@@ -4,7 +4,5 @@ version: 1.0.0
 main: main.Main
 author: Xiang910
 
-commands:
-  hub:
-    description: back to lobby
-    usage: /hub
+loadbefore:
+  - NWTWEngine
